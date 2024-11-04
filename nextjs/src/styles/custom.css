@@ -1,0 +1,14 @@
+.custom-hover-primary:hover {
+  color: var(--bs-primary) !important;
+}
+.custom-hover-shadow:hover {
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important
+}
+.custom-w-33{
+  width:33.33333%
+}
+@media (max-width: 576px) {
+  .custom-sm-body {
+    padding: 0 !important;
+  }
+}

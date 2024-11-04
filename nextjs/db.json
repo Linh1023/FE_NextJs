@@ -1,0 +1,229 @@
+{
+  "blog": [
+    {
+      "title": "What is Lorem Ipsum?",
+      "author": "hihihahahahahah",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "id": 1,
+      "chào": "chào"
+    },
+    {
+      "id": 2,
+      "title": "Why do we use it?",
+      "author": "Eric",
+      "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+    },
+    {
+      "id": 3,
+      "title": "Where does it come from?",
+      "author": "Eric",
+      "content": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum,comes from a line in section 1.10.32."
+    },
+    {
+      "title": "Why do we use it?",
+      "author": "duong le no 1",
+      "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "id": 4
+    },
+    {
+      "title": "Where can I get some?",
+      "author": "yeu 5",
+      "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+      "id": 5
+    },
+    {
+      "title": "08:00",
+      "author": "duong ngoc le",
+      "content": "ưdwdwdwdưdw",
+      "id": 6
+    },
+    {
+      "title": "title",
+      "author": "author",
+      "content": "bla bla bla",
+      "id": 7
+    },
+    {
+      "title": "hiihh",
+      "author": "fff",
+      "content": "ff",
+      "id": 8
+    },
+    {
+      "title": "nen co ten",
+      "author": "chugngngng",
+      "content": "fwfwfwfw",
+      "id": 10
+    },
+    {
+      "title": "đw",
+      "author": "đw",
+      "content": "đwd",
+      "id": 11
+    }
+  ],
+  "tours": [
+    {
+      "id": 1,
+      "title": "Đông Bắc: Hà Giang - Lũng Cú - Đồng Văn - Mã Pí Lèng - Mèo Vạc - Cao Bằng - Thác Bản Giốc - Hồ Ba Bể | Bay Bamboo Airways",
+      "duration": 8,
+      "startLocation": "Hà Nội",
+      "departureTime": "15:00",
+      "departureDate": " 14/06/2024",
+      "originalPrice": 500000,
+      "discountedPrice": 4000000,
+      "imageUrls": [
+        "tour_2.jpg",
+        "tour_3.jpg",
+        "tour_6.jpg",
+        "tour_5.jpg",
+        "tour_1.jpg"
+      ],
+      "code": "NDSGN152-009-260523QH-V-7",
+      "relatedIds": [
+        2,
+        3
+      ],
+      "timeLine": [
+        {
+          "title": "TPHCM – SB NỘI BÀI (HÀ NỘI) – SAPA 02 bữa ăn: (Trưa, Chiều)",
+          "description": "Quý khách tập trung tại sân bay Tân Sơn Nhất (Ga nội địa), hướng dẫn viên hỗ trợ khách làm thủ tục đáp chuyến bay đi Hà Nội. Đến sân bay Nội Bài, xe và HDV đón Quý khách đi khởi hành theo cao tốc Hà Nội – Lào Cai đưa Quý khách đến phố núi Sapa. Trên đường, Quý khách dùng cơm trưa tại nhà hàng địa phương. Đến nơi, Quý khách tham quan:\n- Bản Cát Cát - đẹp như một bức tranh giữa vùng phố cổ Sapa, nơi đây thu hút du khách bởi cầu treo, thác nước, guồng nước và những mảng màu hoa mê hoặc du khách khi lạc bước đến đây. Thăm những nếp nhà của người Mông, Dao, Giáy trong bản, du khách sẽ không khỏi ngỡ ngàng trước vẻ đẹp mộng mị của một trong những ngôi làng cổ đẹp nhất Sapa.\n\nQuý khách dùng cơm tối và nhận phòng nghỉ ngơi hoặc tự do dạo phố ngắm nhà thờ Đá Sapa, tự do thưởng thức đặc sản vùng cao như: thịt lợn cắp nách nướng, trứng nướng, rượu táo mèo, giao lưu với người dân tộc vùng cao."
+        },
+        {
+          "title": "SAPA – FANSIPAN LEGEND – ĐÈO Ô QUY HỒ 03 bữa ăn: (Sáng, Trưa, Chiều)",
+          "description": "Quý khách dùng điểm tâm sáng tại khách sạn. xe đưa đoàn ra ga Sapa, Quý khách trải nghiệm đến khu du lịch Fansipan Legend bằng Tàu hỏa leo núi Mường Hoa hiện đại nhất Việt Nam với tổng chiều dài gần 2000m, thưởng ngoạn bức tranh phong cảnh đầy màu sắc của cánh rừng nguyên sinh, thung lũng Mường Hoa.\n- Chinh phục đỉnh núi Fansipan với độ cao 3.143m hùng vĩ bằng cáp treo (chi phí tự túc).\n- Lễ Phật tại chùa Trình hay cầu phúc lộc, bình an cho gia đình tại Bích Vân Thiền Tự trong hệ thống cảnh quan tâm linh trên đỉnh Fansipan.\n\nTiếp tục hành trình, Quý khách dùng cơm trưa và tham quan:\n- Chinh phục đèo Ô Quy Hồ - con đèo đẹp, hùng vĩ và dài nhất trong Tứ Đại Đỉnh Đèo miền Bắc.\n- Khu du lịch Cổng Trời Ô Quy Hồ - một trong những điểm săn mây, ngắm hoàng hôn cực đẹp tại Sapa.\n\nQuý khách dùng cơm tối tại Sapa và tự do nghỉ ngơi."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Tour Ngày Ngắm Cảnh Đà Nẵng",
+      "duration": 1,
+      "startLocation": "Quảng Nam",
+      "departureTime": "07:00",
+      "departureDate": "28/08/2024",
+      "originalPrice": 4000000,
+      "discountedPrice": 3300000,
+      "imageUrls": [
+        "tour_3.jpg",
+        "tour_2.jpg",
+        "tour_6.jpg",
+        "tour_5.jpg",
+        "tour_1.jpg"
+      ],
+      "code": "EODUR_S2",
+      "relatedIds": [
+        2,
+        3
+      ],
+      "timeLine": [
+        {
+          "title": "Ngắm Cảnh Đà Nẵng",
+          "description": "Đà Nẵng là thành phố lớn thứ 4 của Việt Nam, là cửa ngõ và cảng quốc tế lớn. Thành phố có nguồn gốc từ vương quốc Champa cổ đại.\n\nChuyến tham quan của chúng tôi sẽ giới thiệu cho bạn các địa điểm quan trọng và lịch sử của thành phố. Điểm nổi bật bao gồm Ngũ Hành Sơn, chùa Linh Ứng, nơi có tượng Phật Bà Đà Nẵng, đèo Hải Vân và bãi biển Lăng Cô.\n\nKhởi hành từ Resort bằng ô tô. Điểm dừng đầu tiên là Ngũ Hành Sơn. Đây là địa điểm hành hương nổi tiếng bao gồm một cụm năm ngọn đồi bằng đá cẩm thạch và đá vôi được đặt tên theo năm yếu tố tự nhiên là kim, mộc, thủy, hỏa và thổ. Leo lên và khám phá nhiều hang động, chùa, miếu và đền. Những ngọn núi nằm ở khu vực ven biển nổi tiếng với nghề cắt đá và điêu khắc, cách Đà Nẵng 10km về phía Nam.\n\nSau Ngũ Hành Sơn, chúng tôi đi theo hướng bắc theo con đường ven biển đến bán đảo Sơn Trà. Tại đây chúng ta tham quan tượng Phật Bà Đà Nẵng màu trắng lấp lánh nhìn ra thành phố, tượng Phật cao nhất Việt Nam, tọa lạc bên trong chùa Linh Ứng. Đây là tượng Quan Âm nổi tiếng, hướng mặt ra Biển Đông. Bên trái là Cù Lao Chàm, bên phải là đèo Hải Vân. Chùa Linh Ứng chiếm diện tích 12 ha đất trên núi Sơn Trà. Nó tượng trưng cho niềm tin, dân tộc và đánh dấu sự phát triển của Phật giáo Việt Nam trong thế kỷ 21.\n\nSau bữa trưa tại nhà hàng địa phương truyền thống, chúng tôi tiếp tục hành trình đi về hướng Bắc và tham gia đèo Hải Vân dài 21 km dọc theo quốc lộ 1. Đèo này có nghĩa là Đèo Mây Đại Dương, là một trong những điểm tham quan nổi bật của miền Trung Việt Nam và là con đèo cao nhất ở miền Trung nông thôn (500m so với mực nước biển). Nó uốn lượn như một con rồng khổng lồ trải dài từ Huế đến thành phố Đà Nẵng và được coi là bức tường tự nhiên quan trọng chắn gió từ phía Bắc. Vì vậy, Đà Nẵng và các tỉnh từ Quảng Nam đến miền Nam Việt Nam có thời tiết ấm áp hơn và không có mùa đông. Trong nhiều thế kỷ, đèo Hải Vân là nguồn cảm hứng cho các nhà văn, nhà thơ và nhiếp ảnh gia Việt Nam và nước ngoài.\n\nTừ đèo, chúng tôi đi xuống làng Lăng Cô và bãi cát trắng của bãi biển Lăng Cô. Sau đó, chúng tôi quay trở lại phía Nam đến Hội An và quay trở lại Khu nghỉ dưỡng nơi chuyến tham quan kết thúc."
+        }
+      ]
+    },
+    {
+      "title": "Tour Đồng Bằng Sông Cửu Long 3 Ngày",
+      "id": 3,
+      "duration": 4,
+      "startLocation": "Đồng bằng sông Cửu Long",
+      "departureTime": "12:00",
+      "departureDate": "11/10/2024",
+      "originalPrice": 10000000,
+      "discountedPrice": 9650000,
+      "imageUrls": [
+        "tour_3.jpg",
+        "tour_6.jpg",
+        "tour_2.jpg",
+        "tour_5.jpg",
+        "tour_1.jpg"
+      ],
+      "code": "MK01",
+      "relatedIds": [
+        2,
+        6
+      ],
+      "timeLine": [
+        {
+          "title": "Du thuyền sông Panorama",
+          "description": "Buổi sáng chúng tôi đón bạn tại khách sạn ở Sài Gòn và đưa bạn đi Cần Thơ hoặc Cái Bè. Bạn lên tàu du lịch sông gỗ vào khoảng giữa trưa. Sau đồ uống chào mừng sảng khoái, chúng tôi sẽ giới thiệu cho bạn các tiện nghi trên máy bay và cabin ấm cúng của bạn. Khi bữa trưa được phục vụ, thuyền bắt đầu hành trình. Hãy ngồi lại và ngắm nhìn khung cảnh tuyệt vời cũng như cuộc sống thường nhật của người dân vùng Mê Kông.\n\nVào buổi chiều, bạn có thể xuống tàu để đi dạo nhàn nhã có hướng dẫn qua một ngôi làng và những vườn cây ăn trái hoặc cánh đồng lúa xung quanh. Gặp gỡ những người dân địa phương thân thiện và nếm thử các sản phẩm và trái cây địa phương.\n\nQuay trở lại tàu và thưởng thức đồ uống tại quầy bar hoặc thư giãn trên boong khi mặt trời lặn trên khung cảnh nước tuyệt đẹp của sông Mê Kông. Tàu du lịch sẽ neo đậu qua đêm. Ngày kết thúc bằng bữa tối ngon miệng trên tàu. Quý khách nghỉ đêm trên tàu khách sạn nổi ở Đồng bằng sông Cửu Long."
+        },
+        {
+          "title": "Cuộc sống trên nước và chợ",
+          "description": "Thức dậy trong tiếng nước chảy róc rách và sẵn sàng cho một ngày tham quan thú vị khác ở Đồng bằng sông Cửu Long. Lúc 6h30 tàu du lịch khởi hành đón bình minh. Xem người dân địa phương làm công việc hàng ngày của họ là sấy trái cây lạ và đóng tàu trên bãi gỗ trong khi thưởng thức bữa sáng sớm.\n\nSau khi ăn sáng, chúng ta sẽ lên thuyền vạn đò đi chợ nổi Cái Răng, khu chợ sầm uất và sôi động nhất vùng. Ngạc nhiên trước sự phong phú của các loại trái cây và rau quả kỳ lạ. Chúng tôi sẽ kéo lên thuyền để nói chuyện và mặc cả với các thương lái. Chúng tôi cũng sẽ ghé thăm một số nhà máy sản xuất kẹo và bánh địa phương hoặc đi thuyền qua khung cảnh nước xanh để xem những ngôi nhà địa phương, vườn cây xanh tươi và bãi đóng tàu.\n\nVào buổi sáng, bạn có thể đi thuyền qua khung cảnh nước trong xanh trên một chiếc thuyền tam bản chèo nhỏ để ngắm nhìn những ngôi nhà địa phương, những vườn cây xanh tươi và những bãi đóng tàu. Ngoài ra, bạn có thể đi bộ khám phá thị trấn gần đó hoặc khám phá các kênh nhỏ bên sông Mê Kông bằng xe đạp.\n\nSau đó, du thuyền tiếp tục hành trình khi bữa trưa được phục vụ. Vào buổi chiều sẽ có một chuyến đi phụ khác đến một trong những ngôi làng kỳ lạ trên đường đi."
+        },
+        {
+          "title": "Một thế giới kỳ lạ của riêng",
+          "description": "Sau bữa sáng và xuất phát sớm trong không khí buổi sáng rực rỡ trên sông Mê Kông, chúng ta sẽ ghé thăm một chợ nổi khác. Hãy nhớ đừng bỏ lỡ cơ hội chụp ảnh tuyệt vời để có được những bức ảnh chân thực về người dân Mê Kông và cuộc sống của họ.\n Thực hiện một chuyến đi thuyền tam bản khác ngay vào cảnh quan nông thôn tươi tốt, những cánh đồng màu mỡ, màu xanh tươi tốt. Sau đó là lúc thu dọn đồ đạc và quay trở lại bến tàu nơi chúng tôi bắt đầu.\n Chuyến tham quan du thuyền đồng bằng sông Cửu Long kết thúc vào khoảng 11h – 11h30 trên bến tàu. Vào những ngày chẵn, bạn sẽ ăn trưa tại Trạm dừng nghỉ Mekong. Vào những ngày lẻ, bữa trưa được phục vụ tại Thành phố Vĩnh Long. "
+        }
+      ]
+    },
+    {
+      "title": "Tour Đồng Bằng Sông Cửu Long 2 Ngày",
+      "id": 4,
+      "duration": 5,
+      "startLocation": "Đồng bằng sông Cửu Long",
+      "departureTime": "08:00",
+      "departureDate": "28/08/2024",
+      "originalPrice": 1200000,
+      "discountedPrice": 10000001,
+      "imageUrls": [
+        "tour_6.jpg",
+        "tour_2.jpg",
+        "tour_3.jpg",
+        "tour_5.jpg",
+        "tour_1.jpg"
+      ],
+      "code": "TOUAES33",
+      "relatedIds": [
+        2,
+        3
+      ]
+    },
+    {
+      "title": "Tour riêng: Chuyến đi trong ngày tại Đồng bằng sông Cửu Long từ Thành phố Hồ Chí Minh",
+      "id": 5,
+      "duration": 3,
+      "startLocation": "Đồng bằng sông Cửu Long",
+      "departureTime": "08:00",
+      "departureDate": "28/08/2024",
+      "originalPrice": 1200000,
+      "discountedPrice": 10000001,
+      "imageUrls": [
+        "tour_5.jpg",
+        "tour_2.jpg",
+        "tour_3.jpg",
+        "tour_6.jpg",
+        "tour_1.jpg"
+      ],
+      "code": "TOUR_AER4",
+      "relatedIds": [
+        2,
+        3
+      ]
+    },
+    {
+      "title": "Địa đạo Củ Chi – Kỳ quan hào hùng bằng tàu cao tốc",
+      "id": 6,
+      "duration": 1,
+      "startLocation": "Đồng bằng sông Cửu Long",
+      "departureTime": "08:00",
+      "departureDate": "28/08/2024",
+      "originalPrice": 1200000,
+      "discountedPrice": 10000001,
+      "imageUrls": [
+        "tour_1.jpg",
+        "tour_2.jpg",
+        "tour_3.jpg",
+        "tour_6.jpg",
+        "tour_5.jpg"
+      ],
+      "code": "TOUR_SAC12",
+      "relatedIds": [
+        2,
+        3
+      ]
+    }
+  ]
+}
