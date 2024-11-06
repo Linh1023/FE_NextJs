@@ -6,7 +6,8 @@ import "@/styles/custom.css";
 import NextTopLoader from "nextjs-toploader";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-
+import '@fortawesome/fontawesome-free/css/all.min.css'
+import { SessionProvider } from "next-auth/react"
 export default function ClientLayout({
   children,
 }: {
@@ -17,7 +18,9 @@ export default function ClientLayout({
       <head></head>
       <body className="custom-sm-body">
         <header>
+        <SessionProvider>
           <NavBar />
+        </SessionProvider>
           <NextTopLoader
             color="linear-gradient(268deg, #ec3d04 0%, #FF2A69 100%)"
             initialPosition={0.08}

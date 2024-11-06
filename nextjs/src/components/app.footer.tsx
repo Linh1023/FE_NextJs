@@ -19,14 +19,28 @@ function Footer() {
         <Col>
           <h4>Dòng tour </h4>
           <ul className="list-unstyled">
-            <Link className={"nav-link"} href={"#"}> Cầu Giấy, Hà Nội </Link>
-            <li>0242 2420 777 </li>
-            <li>0987654321 </li>
-            <li>info@webtra.vn </li>
+            <li>Cao cấp</li>
+            <li>Tiêu chuẩn </li>
+            <li>Tiết kiệm</li>
+            <li>Giá tốt</li>
           </ul>
         </Col>
-        <Col>Thông Tin 1</Col>
-        <Col>Thông Tin 2</Col>
+        <Col>
+          <h4>Thông tin</h4>
+          <ul className="list-unstyled">
+          <li>Phương thức thanh toán</li>
+          </ul>
+
+        </Col>
+        <Col>
+          <h4>Mạng xã hội</h4>
+          <div className="icon__div" >
+            <i className="fa-brands fa-facebook"></i>
+            <i className="fa-brands fa-instagram  icon-footer__icon"></i>
+            <i className="fa-solid fa-phone-volume  icon-footer__icon"></i>
+            <i className="fa-brands fa-youtube  icon-footer__icon"></i>
+          </div>
+        </Col>
       </Row>
     </Container>
   );

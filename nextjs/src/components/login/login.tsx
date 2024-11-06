@@ -5,12 +5,12 @@ import Image from 'next/image'
 import { Button, Form } from 'react-bootstrap';
 import { signIn } from "next-auth/react"
 import { toast } from 'react-toastify';
-import { useSession } from "next-auth/react"
+
 const LoginForm = () => {
     const [email, setEmail] = useState<string>("")
     const [password, setPassword] = useState<string>("")
     const [validation,setValidation] = useState<boolean>(false)
-    const { data: session } = useSession()
+
 
     const handleSubmit = async (event: any) => {
         const form = event.currentTarget;
@@ -49,7 +49,6 @@ const LoginForm = () => {
         <>
             <div className='container-login__div'>
                 {/* Background Image */}
-                <div> {session?.user ? session.user.email :"login khong tyhanh cong"} </div>
                 {/* Foreground Form */}
                 <Form className="shadow p-4 bg-white rounded container-login__Form" onSubmit={handleSubmit}>
                     <div className="h4 mb-2 text-center">
