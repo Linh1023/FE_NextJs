@@ -51,6 +51,12 @@ export const fetchGetBlogs = async (): Promise<IBlogResponse[]> => {
   return fetchGetAuthorizedData(url);
 };
 
+
+export const fetchGetAccounts = async (): Promise<User[]> => {
+  let url = `/account`;
+  return fetchGetAuthorizedData(url);
+};
+
 export const fetchGetBlog = async (
   blogId: string
 ): Promise<IBlogDetailResponse> => {

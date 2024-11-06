@@ -15,7 +15,9 @@ function NavBar() {
             <Link className='nav-link' href="/">Home</Link>
             <Link className='nav-link' href="/tour">Tour</Link>
             <Link className='nav-link' href="/blog">Blog</Link>
-           
+          </Nav>
+          <Nav className="ms-auto">
+            <Link className="nav-link" href="/contact">Contact</Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

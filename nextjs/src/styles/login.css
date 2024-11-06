@@ -1,0 +1,42 @@
+.container-login__div {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.container-login__Form {
+    position: relative;
+    z-index: 1;
+    max-width: 400px;
+    margin: 0 auto;
+    top: 20%
+}
+
+.background-image__Image{
+    object-fit: cover;
+     z-index: -1;
+}
+
+.btn-login__Button{
+    width: 100%;
+    background-color: #6998AB;
+    border: 0px;
+}
+
+.btn-login__Button:hover{
+  
+    background-color: #3693b5;
+  
+}
+
+.user-image__Image{
+    border-radius: 100px;
+}
+
+.ctn-email__Form-Group{
+    height: 70px;
+}
+
+.obligatory__Form-Label{
+    color: red;
+}

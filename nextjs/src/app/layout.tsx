@@ -4,6 +4,8 @@ import Footer from "@/components/app.footer";
 import "@/styles/globals.css";
 import "@/styles/custom.css";
 import NextTopLoader from "nextjs-toploader";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function ClientLayout({
   children,
@@ -32,6 +34,19 @@ export default function ClientLayout({
           <div className="container">
             {children}
             </div>
+            <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"/>
+        {/* Same as */}
+        <ToastContainer />
         </main>
         <footer>
           <Footer />
