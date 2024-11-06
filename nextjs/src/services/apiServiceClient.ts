@@ -1,29 +1,39 @@
 const url_api = process.env.NEXT_PUBLIC_URL_API;
-// import Logger from '../utils/logger';
 
 export const fetchGetTour = async (
   tourId: string
 ): Promise<ITourDetailResponse> => {
-  let url = `/tours/${tourId}`;
+  let url = `/tour/${tourId}`;
   return fetchGetAuthorizedData(url);
 };
 export const fetchGetTours = async (): Promise<ITourResponse[]> => {
-  let url = `/tours`;
+  let url = `/tour`;
   return fetchGetAuthorizedData(url);
 };
-const delay = (ms: number | undefined) =>
-  new Promise((resolve) => setTimeout(resolve, ms));
+
+export const fetchGetBlogs = async (): Promise<IBlogResponse[]> => {
+  let url = `/blog`;
+  return fetchGetAuthorizedData(url);
+};
+
+export const fetchGetBlog = async (
+  blogId: number
+): Promise<IBlogDetailResponse> => {
+  let url = `/blog/${blogId}`;
+  return fetchGetAuthorizedData(url);
+};
+
 
 const fetchGetAuthorizedData = async (url: string): Promise<any> => {
   try {
-    console.log("url client get",url_api + url);
+    console.log("url client get", url_api + url);
     const res = await fetch(url_api + url, {
       method: "GET",
       headers: {
-       'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     });
-   // await delay(1000);
+    await new Promise(resolve => setTimeout(resolve, 1000));
 
     if (!res.ok) {
       throw new Error(`HTTP error! status: ${res.status}`);
@@ -33,14 +43,14 @@ const fetchGetAuthorizedData = async (url: string): Promise<any> => {
     return data;
   } catch (error) {
     // Logger.error((error as Error).message);
-    throw error; 
+    throw error;
   }
 };
 
 const fetchPostAuthorizedData = async (url: string, bodyData: any) => {
   try {
     const res = await fetch(url_api + url, {
-      method: "POST", 
+      method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
         "Content-Type": "application/json",

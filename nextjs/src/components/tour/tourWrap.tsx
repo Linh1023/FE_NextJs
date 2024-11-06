@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import TourCard from "./tourCard";
 import { Accordion, Button, Col, Form, Modal, Row } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
+import TourCard from "@/components/tour/tourCard";
 
 interface Props {
   tour: ITourDetailResponse;

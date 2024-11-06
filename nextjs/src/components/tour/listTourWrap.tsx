@@ -1,8 +1,8 @@
 "use client";
+import TourCard from "@/components/tour/tourCard";
 import { fetchGetTours } from "@/services/apiServiceClient";
-import { Button, Col, Form, Row, Spinner } from "react-bootstrap";
-import TourCard from "@/components/tourCard";
 import { useEffect, useState } from "react";
+import { Button, Col, Form, Row, Spinner } from "react-bootstrap";
 
 interface Props {
   tourCards: ITourResponse[];
@@ -77,7 +77,7 @@ const ListTourWrap = (props: Props) => {
         {loading && (
           <div className="overlay-bg">
             <div className="spinner">
-              <Spinner variant="danger"/>
+              <Spinner variant="white"/>
             </div>
           </div>
         )}

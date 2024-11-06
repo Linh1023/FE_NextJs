@@ -105,12 +105,11 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.5); /*Màu nền với độ trong suốt */
+  background-color: rgba(122, 122, 122, 0.5);
   display: flex;
   justify-content: center;
-  color: white; /* Màu chữ */
-  z-index: 100; /* Đảm bảo lớp phủ nằm trên nội dung */
-  pointer-events: none; /* Ngăn chặn các sự kiện chuột trên lớp phủ */
+  color: white;
+  z-index: 100;
 }
 .custom-h-img {
   max-height: 250px;

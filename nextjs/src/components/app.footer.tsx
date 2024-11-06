@@ -1,9 +1,7 @@
 "use client";
 import Link from "next/link";
-import { Button, Col, Form, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
 
 function Footer() {
   return (

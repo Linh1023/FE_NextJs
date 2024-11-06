@@ -1,6 +1,5 @@
-import TourListWrap from "@/components/listTourWrap";
+import TourListWrap from "@/components/tour/listTourWrap";
 import { fetchGetTours } from "@/services/apiServiceServer";
-import React from "react";
 
 const PageListTour = async () => {
  

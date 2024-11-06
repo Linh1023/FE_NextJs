@@ -1,6 +1,5 @@
-import TourWrap from "@/components/tourWrap";
+import TourWrap from "@/components/tour/tourWrap";
 import { fetchGetTour, fetchGetToursByIds } from "@/services/apiServiceServer";
-import React from "react";
 
 // Define an interface for the params
 interface Params {
