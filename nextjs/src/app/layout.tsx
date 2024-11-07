@@ -8,6 +8,7 @@ import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import { SessionProvider } from "next-auth/react"
+import { MyProvider } from "@/utils/MyContext";
 export default function ClientLayout({
   children,
 }: {
@@ -17,10 +18,10 @@ export default function ClientLayout({
     <html className="">
       <head></head>
       <body className="custom-sm-body">
+          <SessionProvider>
         <header>
-        <SessionProvider>
-          <NavBar />
-        </SessionProvider>
+            <NavBar />
+         
           <NextTopLoader
             color="linear-gradient(268deg, #ec3d04 0%, #FF2A69 100%)"
             initialPosition={0.08}
@@ -35,25 +36,29 @@ export default function ClientLayout({
         </header>
         <main>
           <div className="container">
-            {children}
-            </div>
-            <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="light"/>
-        {/* Same as */}
-        <ToastContainer />
+            
+            <MyProvider>
+              {children}
+            </MyProvider>
+          </div>
+          <ToastContainer
+            position="top-right"
+            autoClose={1000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light" />
+          {/* Same as */}
+          <ToastContainer />
         </main>
         <footer>
           <Footer />
         </footer>
+        </SessionProvider>
       </body>
     </html>
   );

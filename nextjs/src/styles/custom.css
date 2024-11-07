@@ -23,6 +23,7 @@ img{
   --bs-bg-opacity: 1;
 
   background-color: rgba(var(--bs-tertiary-bg-rgb),var(--bs-bg-opacity)) !important;
+
 }
 
 .container-header__Navbar{
@@ -30,6 +31,11 @@ img{
 }
 
 .icon__div{
+  display: flex;
+  align-items: center;
+}
+
+.btn-reserve-love__div{
   display: flex;
   align-items: center;
 }

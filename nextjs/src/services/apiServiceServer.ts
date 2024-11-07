@@ -64,6 +64,13 @@ export const fetchGetBlog = async (
   return fetchGetAuthorizedData(url);
 };
 
+export const fetchGetCart = async (
+  email: string
+): Promise<CartResponse> => {
+  let url = `/cart/${email}`;
+  return fetchGetAuthorizedData(url);
+};
+
 const fetchGetAuthorizedData = async (url: string) => {
   console.log("url server get ", BASE_URL + url);
   const res = await fetch(BASE_URL + url, {

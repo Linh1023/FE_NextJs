@@ -4,13 +4,14 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image'
 import { Button, Form } from 'react-bootstrap';
 import { signIn } from "next-auth/react"
+import Alert from 'react-bootstrap/Alert';
 import { toast } from 'react-toastify';
 
 const LoginForm = () => {
     const [email, setEmail] = useState<string>("")
     const [password, setPassword] = useState<string>("")
-    const [validation,setValidation] = useState<boolean>(false)
-
+    const [validation, setValidation] = useState<boolean>(false)
+    const [flag, setFlag] = useState<boolean>(true)
 
     const handleSubmit = async (event: any) => {
         const form = event.currentTarget;
@@ -23,11 +24,12 @@ const LoginForm = () => {
         });
 
         if (data?.error === "Configuration") {
-            toast.error("Sai mật khẩu tài khoản")
             console.log("Error")
+            setFlag(false)
         } else {
             toast.success("Đăng nhập thành công")
             console.log("Success")
+            setFlag(true)
             window.location.href = "http://localhost:3000/tour"; // Điều hướng đến URL mới
         }
 
@@ -36,12 +38,13 @@ const LoginForm = () => {
     const handleEmail = (e: string) => {
         const regex: RegExp = /^(?=.{1,64}@)[A-Za-z0-9_-]+(\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*(\.[A-Za-z]{2,})$/;
         if (regex.test(e)) {
-          setValidation(true)
+            setValidation(true)
         } else {
-          setValidation(false)
+            setValidation(false)
         }
         setEmail(e);
-      }
+        setFlag(true)
+    }
 
 
 
@@ -60,6 +63,13 @@ const LoginForm = () => {
                         />
                     </div>
                     <div className="h4 mb-2 text-center">Sign In</div>
+
+                    {flag == false && (<>
+                        <Alert key={"danger"} variant={"danger"}>
+                            Sai mật khẩu hoặc tài khoản
+                        </Alert>
+                    </>)}
+
 
 
                     <Form.Group className="ctn-email__Form-Group" >
@@ -84,10 +94,10 @@ const LoginForm = () => {
                         <Form.Label><span className='obligatory__Form-Label' >*</span> Password</Form.Label>
                         <Form.Control
                             name="password"
-                            type="text"
+                            type="password"
                             placeholder="Password"
                             value={password}
-                            onChange={(e) => { setPassword(e.target.value) }}
+                            onChange={(e) => { setPassword(e.target.value); setFlag(true) }}
                             required
                         />
                     </Form.Group>

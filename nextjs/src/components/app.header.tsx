@@ -29,7 +29,7 @@ function NavBar() {
           </Nav>
           <Nav className="ms-auto">
         
-          <Link className="nav-link" href="/cart"> <i className="fa-solid fa-heart"></i></Link>
+          <Link className="nav-link" href="/cart" style={{color:"red"}} > <i className="fa-solid fa-heart"></i></Link>
 
           {session?.user ? <p className="nav-link" style={{marginBottom:"0px"}}><i className="fa-solid fa-user"  ></i></p> :  
           <Link className="nav-link" href="/login" style={{marginBottom:"0px"}} ><i className="fa-solid fa-user" ></i></Link>}

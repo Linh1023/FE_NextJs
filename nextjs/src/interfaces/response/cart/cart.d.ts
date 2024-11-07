@@ -1,4 +1,4 @@
 interface CartResponse {
-    id:number,
+    id:string,
     item: ItemResponse[]
 }

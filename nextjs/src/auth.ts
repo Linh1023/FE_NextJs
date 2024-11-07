@@ -36,6 +36,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           throw new Error("User not found.")
         }
 
+        console.log(foundUser)
+
 
         // return user object with their profile data
         return foundUser
