@@ -225,5 +225,46 @@
         3
       ]
     }
+  ],
+
+  "account": [
+    {
+      "id": 1,
+      "email": "duongngocle4231@gmail.com",
+      "password": "123123dnl"
+    },
+    {
+      "id": 2,
+      "email": "lengocduong003@gmail.com",
+      "password": "123123dnl"
+    }
+  ],
+  "cart": [
+    {
+      "id": "duongngocle4231@gmail.com",
+      "item": [
+        {
+          "tour_id": 1,
+          "time": "2003-02-03 12:00:00"
+        },
+        {
+          "tour_id": 5,
+          "time": "2003-02-03 12:00:00"
+        }
+      ]
+    },
+    {
+      "id": "lengocduong003@gmail.com",
+      "item": [
+        {
+          "tour_id": 1,
+          "time": "2003-03-04"
+        },
+        {
+          "tour_id": 2,
+          "time": "2003-03-04"
+        }
+      ]
+    }
   ]
 }
