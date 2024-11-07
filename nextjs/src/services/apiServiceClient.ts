@@ -23,6 +23,23 @@ export const fetchGetBlog = async (
   return fetchGetAuthorizedData(url);
 };
 
+export const fetchGetCart = async (
+  email: string
+): Promise<CartResponse> => {
+  let url = `/cart/${email}`;
+  return fetchGetAuthorizedData(url);
+};
+
+
+export const fetchPutCart = async (
+  slug: string,
+  updateData: CartResponse
+): Promise<any> => {
+  const url = `/cart/${slug}`;
+  return fetchPutAuthorizedData(url, updateData);
+};
+
+
 
 const fetchGetAuthorizedData = async (url: string): Promise<any> => {
   try {

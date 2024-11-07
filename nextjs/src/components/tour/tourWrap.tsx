@@ -3,7 +3,12 @@ import { useEffect, useState } from "react";
 import { Accordion, Button, Col, Form, Modal, Row } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import TourCard from "@/components/tour/tourCard";
-
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
+import { useSession } from "next-auth/react"
+import { useMyContext } from '@/utils/MyContext';
+import { toast } from "react-toastify";
+import { fetchPutCart } from "@/services/apiServiceClient";
 interface Props {
   tour: ITourDetailResponse;
   toursRelated: ITourResponse[];
@@ -23,7 +28,41 @@ const TourWrap = (props: Props) => {
     setImgMain(value);
   };
   const handleCloseImg = () => setShowImg(false);
-  useEffect(() => {});
+  useEffect(() => { });
+
+  const renderTooltip = (props: any) => (
+    <Tooltip id="button-tooltip" {...props}>
+      Yêu thích
+    </Tooltip>
+  );
+
+  const { cart, setCart } = useMyContext();
+  const { data: session } = useSession()
+
+  const handleAdd = async (item: ITourResponse) => {
+    if (session?.user) {
+      console.log("cart >>>> ",cart)
+
+      const existsInArray = cart.item.find(i => i.tour_id === item.id) !== undefined;
+      console.log("existsInArray >>>> ",existsInArray)
+
+      if (!existsInArray) {
+        const newCart = { ...cart }
+        const newItem: ItemResponse = {
+          tour_id: item.id,
+          time: '2003-03-04'
+        }
+        newCart.item.push(newItem)
+        setCart(newCart)
+        const res = await fetchPutCart(newCart.id, newCart)
+        toast.success("Thêm vào mục yêu thích thành công")
+      } else {
+        toast.info("Tour đã có trong mục yêu thích")
+      }
+    } else {
+      toast.info("Vui lòng đăng nhập để thêm vào mục yêu thích")
+    }
+  }
 
   return (
     <>
@@ -46,13 +85,27 @@ const TourWrap = (props: Props) => {
                 </span>
               </Col>
               <Col>
-                <Button
-                  className="my-2 p-2 w-100"
-                  variant="danger"
-                  href={`/order?tour=${tour.id}`}
-                >
-                  Đặt ngay
-                </Button>
+                <div className="btn-reserve-love__div">
+                  <Button
+                    className="my-2 p-2 w-100"
+                    variant="danger"
+                    href={`/order?tour=${tour.id}`}
+                  >
+                    Đặt ngay
+                  </Button>
+                  <OverlayTrigger
+                    placement="right"
+                    delay={{ show: 250, hide: 400 }}
+                    overlay={renderTooltip}
+                  >
+                    <Button variant="outline-danger" style={{ marginLeft: "10px" }}
+                      onClick={() => { handleAdd(tour) }}
+                    > <i className="fa-solid fa-heart"></i></Button>
+                  </OverlayTrigger>
+                </div>
+
+
+
                 <Button
                   className="my-2 p-2 w-100"
                   variant="outline-primary"
@@ -99,7 +152,7 @@ const TourWrap = (props: Props) => {
                   <Accordion.Body>
                     {tour.timeLine?.map((day, index) => (
                       <a key={index}
-                        href={`#ngay_${index+1}`}
+                        href={`#ngay_${index + 1}`}
                         className="p-2 d-block mt-2 outline btn btn-outline-primary"
                       >
                         Ngày {index + 1}: {day.title}

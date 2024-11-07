@@ -51,10 +51,23 @@ export const fetchGetBlogs = async (): Promise<IBlogResponse[]> => {
   return fetchGetAuthorizedData(url);
 };
 
+
+export const fetchGetAccounts = async (): Promise<User[]> => {
+  let url = `/account`;
+  return fetchGetAuthorizedData(url);
+};
+
 export const fetchGetBlog = async (
   blogId: string
 ): Promise<IBlogDetailResponse> => {
   let url = `/blog/${blogId}`;
+  return fetchGetAuthorizedData(url);
+};
+
+export const fetchGetCart = async (
+  email: string
+): Promise<CartResponse> => {
+  let url = `/cart/${email}`;
   return fetchGetAuthorizedData(url);
 };
 
