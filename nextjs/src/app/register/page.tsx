@@ -1,24 +1,16 @@
-
-import LoginForm from "@/components/login/login"
+import Register from "@/components/register/register"
 import "@/styles/login.css"
 import { auth } from "@/auth"
 import { redirect } from 'next/navigation'
-const LoginPage = async () => { 
-
+const RegisterPage = async () => {
     const session = await auth()
     if (session?.user) return (
         redirect('/tour')
     )
-
-
-    return (
-        <>
-
-            <LoginForm />
-
-          
-        </>
-    )
+    return (<>
+       <Register/>
+    
+    </>)
 }
 
-export default LoginPage
+export default RegisterPage

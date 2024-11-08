@@ -6,6 +6,7 @@ import { Button, Form } from 'react-bootstrap';
 import { signIn } from "next-auth/react"
 import Alert from 'react-bootstrap/Alert';
 import { toast } from 'react-toastify';
+import Link from 'next/link';
 
 const LoginForm = () => {
     const [email, setEmail] = useState<string>("")
@@ -105,6 +106,14 @@ const LoginForm = () => {
                         <Button variant="primary" className='btn-login__Button'
                             type='submit'
                         >Login</Button>
+
+                    </Form.Group>
+                    <Form.Group className='mt-4 text-center' >
+
+                    <Button variant="primary"  className='btn-login__Button' >
+                    <Link href={"/register"} type='button'  className='btn-login__Button'>Register</Link>
+                        </Button>
+
                     </Form.Group>
                 </Form>
             </div>
