@@ -9,7 +9,7 @@
     z-index: 1;
     max-width: 400px;
     margin: 0 auto;
-    top: 10%
+
 }
 
 .background-image__Image{
@@ -39,4 +39,8 @@
 
 .obligatory__Form-Label{
     color: red;
+}
+
+.ctn-item-register__Form-Group{
+    height: 90px;
 }

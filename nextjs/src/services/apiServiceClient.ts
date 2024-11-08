@@ -11,6 +11,12 @@ export const fetchGetTours = async (): Promise<ITourResponse[]> => {
   return fetchGetAuthorizedData(url);
 };
 
+export const fetchGetAccounts = async (): Promise<User[]> => {
+  let url = `/account`;
+  return fetchGetAuthorizedData(url);
+};
+
+
 export const fetchGetBlogs = async (): Promise<IBlogResponse[]> => {
   let url = `/blog`;
   return fetchGetAuthorizedData(url);
@@ -37,6 +43,21 @@ export const fetchPutCart = async (
 ): Promise<any> => {
   const url = `/cart/${slug}`;
   return fetchPutAuthorizedData(url, updateData);
+};
+
+export const fetchPostCart = async (
+  newData: CartResponse
+): Promise<any> => {
+  const url = `/cart`;
+  return fetchPostAuthorizedData(url, newData);
+};
+
+
+export const fetchPostAccount = async (
+  newData: UserLogin
+): Promise<any> => {
+  const url = `/account`;
+  return fetchPostAuthorizedData(url, newData);
 };
 
 
