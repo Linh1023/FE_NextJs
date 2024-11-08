@@ -52,8 +52,6 @@ export default function ClientLayout({
             draggable
             pauseOnHover
             theme="light" />
-          {/* Same as */}
-          <ToastContainer />
         </main>
         <footer>
           <Footer />
