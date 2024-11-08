@@ -197,7 +197,8 @@ const TourWrap = (props: Props) => {
         <Row className="mt-2 position-relative">
           {toursRelated?.map((tourRelated, index) => (
             <Col sm={6} md={6} lg={4} key={index} className="mt-3">
-              <TourCard tourCard={tourRelated} />
+              <TourCard tourCard={tourRelated} 
+              handleShowBooking = {handleShowBooking}/>
             </Col>
           ))}
         </Row>
