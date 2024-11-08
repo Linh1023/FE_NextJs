@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 import { useSession } from "next-auth/react"
 interface Props {
   tourCard: ITourResponse;
+  handleShowBooking:(title: string,id:number)=> void;
 }
 
 const TourCard = (props: Props) => {
@@ -49,6 +50,7 @@ const TourCard = (props: Props) => {
 
 
   }
+   const {handleShowBooking} = props
 
   const tourCard = props.tourCard;
   if (!tourCard != null)
@@ -83,7 +85,7 @@ const TourCard = (props: Props) => {
             </span>
           </Card.Text>
           <div className="d-flex justify-content-between">
-            <Button className="rounded-1" variant="danger" href={`/order?tour=${tourCard.id}`}>
+            <Button className="rounded-1" variant="danger"  onClick={()=>{handleShowBooking(tourCard.title,tourCard.id)}}>
               Đặt ngay
             </Button>
             <div>

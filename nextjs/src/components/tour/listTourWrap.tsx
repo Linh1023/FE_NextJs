@@ -3,6 +3,7 @@ import TourCard from "@/components/tour/tourCard";
 import { fetchGetTours } from "@/services/apiServiceClient";
 import { useEffect, useState } from "react";
 import { Button, Col, Form, Row, Spinner } from "react-bootstrap";
+import { ModalCustom } from "./modal";
 
 interface Props {
   tourCards: ITourResponse[];
@@ -12,6 +13,14 @@ const ListTourWrap = (props: Props) => {
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
 
+  const [show, setShow] = useState(false);
+  const [tourTitle, setTourTitle] = useState<string>('');
+  const [tourId, setTourId] = useState<number>(0);
+  const handleShowBooking = (title: string,id:number) => {
+    setTourTitle(title);
+    setTourId(id);
+    setShow(true);
+  };
 
   const handleSelectChange = async (e: string) => {
     setLoading(true);
@@ -71,7 +80,7 @@ const ListTourWrap = (props: Props) => {
       <Row className="mt-2 position-relative">
         {tourCards?.map((tourCard, index) => (
           <Col sm={6} md={6} lg={4} key={index} className="mt-3">
-            <TourCard tourCard={tourCard} />
+            <TourCard tourCard={tourCard} handleShowBooking={handleShowBooking}/>
           </Col>
         ))}
         {loading && (
@@ -82,6 +91,14 @@ const ListTourWrap = (props: Props) => {
           </div>
         )}
       </Row>
+      <ModalCustom 
+          show={show}
+          setShow={setShow}
+          tourTitle={tourTitle}
+          setTourTitle={setTourTitle}
+          tourId={tourId}
+          setTourId={setTourId}
+          />
     </>
   );
 };
