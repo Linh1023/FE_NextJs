@@ -60,7 +60,6 @@ const BlogWrap = (props: Props) => {
         </Row>
       </div>
 
-      {/* Modal */}
       <Modal
         show={showImg}
         onHide={handleCloseImg}

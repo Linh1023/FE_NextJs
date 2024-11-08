@@ -3,12 +3,13 @@ import { useEffect, useState } from "react";
 import { Accordion, Button, Col, Form, Modal, Row } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import TourCard from "@/components/tour/tourCard";
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Tooltip from 'react-bootstrap/Tooltip';
-import { useSession } from "next-auth/react"
-import { useMyContext } from '@/utils/MyContext';
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
+import { useSession } from "next-auth/react";
+import { useMyContext } from "@/utils/MyContext";
 import { toast } from "react-toastify";
 import { fetchPutCart } from "@/services/apiServiceClient";
+import { ModalCustom } from "./modal";
 interface Props {
   tour: ITourDetailResponse;
   toursRelated: ITourResponse[];
@@ -17,9 +18,20 @@ const TourWrap = (props: Props) => {
   const [toursRelated, settoursRelated] = useState(props.toursRelated);
   const [tour, setTour] = useState(props.tour);
 
-  const [showContact, setShowContact] = useState(false);
-  const handleCloseContact = () => setShowContact(false);
-  const handleShowContact = () => setShowContact(true);
+  const [showContact, setShow] = useState(false);
+  const [tourTitle, setTourTitle] = useState<string>('');
+  const [tourId, setTourId] = useState<number>(0);
+  const handleShow = () => setShow(true);
+  const handleShowBooking = (title: string,id:number) => {
+    setTourTitle(title);
+    setTourId(id);
+    setShow(true);
+  };
+
+
+  useEffect(()=>{
+    console.log(tourId)
+  },[showContact])
 
   const [imgMain, setImgMain] = useState<string>("");
   const [showImg, setShowImg] = useState(false);
@@ -28,7 +40,7 @@ const TourWrap = (props: Props) => {
     setImgMain(value);
   };
   const handleCloseImg = () => setShowImg(false);
-  useEffect(() => { });
+  useEffect(() => {});
 
   const renderTooltip = (props: any) => (
     <Tooltip id="button-tooltip" {...props}>
@@ -37,32 +49,33 @@ const TourWrap = (props: Props) => {
   );
 
   const { cart, setCart } = useMyContext();
-  const { data: session } = useSession()
+  const { data: session } = useSession();
 
   const handleAdd = async (item: ITourResponse) => {
     if (session?.user) {
-      console.log("cart >>>> ",cart)
+      console.log("cart >>>> ", cart);
 
-      const existsInArray = cart.item.find(i => i.tour_id === item.id) !== undefined;
-      console.log("existsInArray >>>> ",existsInArray)
+      const existsInArray =
+        cart.item.find((i) => i.tour_id === item.id) !== undefined;
+      console.log("existsInArray >>>> ", existsInArray);
 
       if (!existsInArray) {
-        const newCart = { ...cart }
+        const newCart = { ...cart };
         const newItem: ItemResponse = {
           tour_id: item.id,
-          time: '2003-03-04'
-        }
-        newCart.item.push(newItem)
-        setCart(newCart)
-        const res = await fetchPutCart(newCart.id, newCart)
-        toast.success("Thêm vào mục yêu thích thành công")
+          time: "2003-03-04",
+        };
+        newCart.item.push(newItem);
+        setCart(newCart);
+        const res = await fetchPutCart(newCart.id, newCart);
+        toast.success("Thêm vào mục yêu thích thành công");
       } else {
-        toast.info("Tour đã có trong mục yêu thích")
+        toast.info("Tour đã có trong mục yêu thích");
       }
     } else {
-      toast.info("Vui lòng đăng nhập để thêm vào mục yêu thích")
+      toast.info("Vui lòng đăng nhập để thêm vào mục yêu thích");
     }
-  }
+  };
 
   return (
     <>
@@ -86,11 +99,7 @@ const TourWrap = (props: Props) => {
               </Col>
               <Col>
                 <div className="btn-reserve-love__div">
-                  <Button
-                    className="my-2 p-2 w-100"
-                    variant="danger"
-                    href={`/order?tour=${tour.id}`}
-                  >
+                  <Button className="my-2 p-2 w-100" variant="danger"  onClick={() => handleShowBooking(tour.title,tour.id)}>
                     Đặt ngay
                   </Button>
                   <OverlayTrigger
@@ -98,18 +107,23 @@ const TourWrap = (props: Props) => {
                     delay={{ show: 250, hide: 400 }}
                     overlay={renderTooltip}
                   >
-                    <Button variant="outline-danger" style={{ marginLeft: "10px" }}
-                      onClick={() => { handleAdd(tour) }}
-                    > <i className="fa-solid fa-heart"></i></Button>
+                    <Button
+                      variant="outline-danger"
+                      style={{ marginLeft: "10px" }}
+                      onClick={() => {
+                        handleAdd(tour);
+                      }}
+                    >
+                      
+                      <i className="fa-solid fa-heart"></i>
+                    </Button>
                   </OverlayTrigger>
                 </div>
-
-
 
                 <Button
                   className="my-2 p-2 w-100"
                   variant="outline-primary"
-                  onClick={handleShowContact}
+                  onClick={() => handleShow()}
                 >
                   Liên hệ tư vấn
                 </Button>
@@ -151,7 +165,8 @@ const TourWrap = (props: Props) => {
                   <Accordion.Header>Nội dung chính</Accordion.Header>
                   <Accordion.Body>
                     {tour.timeLine?.map((day, index) => (
-                      <a key={index}
+                      <a
+                        key={index}
                         href={`#ngay_${index + 1}`}
                         className="p-2 d-block mt-2 outline btn btn-outline-primary"
                       >
@@ -165,7 +180,8 @@ const TourWrap = (props: Props) => {
           </Col>
           <Col lg={9}>
             {tour.timeLine?.map((day, index) => (
-              <div key={index}
+              <div
+                key={index}
                 id={`ngay_${index + 1}`}
                 className="border p-3 rounded border-1 mt-2"
               >
@@ -186,41 +202,15 @@ const TourWrap = (props: Props) => {
           ))}
         </Row>
       </div>
+      <ModalCustom 
+          show={showContact}
+          setShow={setShow}
+          tourTitle={tourTitle}
+          setTourTitle={setTourTitle}
+          tourId={tourId}
+          setTourId={setTourId}
+          />
 
-      <Modal show={showContact} onHide={handleCloseContact}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control
-                type="email"
-                placeholder="name@example.com"
-                autoFocus
-              />
-            </Form.Group>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>Example textarea</Form.Label>
-              <Form.Control as="textarea" rows={3} />
-            </Form.Group>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseContact}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleCloseContact}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-
-      {/* Modal */}
       <Modal
         show={showImg}
         onHide={handleCloseImg}
